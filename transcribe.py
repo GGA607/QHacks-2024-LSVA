@@ -1,6 +1,8 @@
-import whisper
-model = whisper.load_model("base")
+import speech_recognition as sr 
+r = sr.Recognizer()
 
-result = model.transcribe("output.wav")
-with open("response.txt", "w") as f:
-    f.write(result["text"])
+response = sr.AudioFile("output.wav")
+with response as source:
+    audio = r.record(source)
+
+print(r.recognize_google(audio))
