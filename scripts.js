@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const promptDisplay = document.getElementById("promptDisplay");
 
     getPromptBtn.addEventListener("click", async () => {
-        console.log("Button clicked");
+        
+        getPromptBtn.parentNode.remove();
+
+
 
         try {
             const response = await fetch("prompts.json");
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const randomPrompt = promptsArray[randomIndex];
 
                 // Update the UI with the randomly selected prompt
-                promptDisplay.innerText = randomPrompt;
+                promptDisplay.innerText = "Q. " + randomPrompt;
             } else {
                 promptDisplay.innerText = "No prompts available.";
             }
