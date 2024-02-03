@@ -5,18 +5,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000; /* Black background */
-}
+    background-color: #000; 
 
 .container {
     text-align: center;
-    color: #fff; /* White font color */
+    color: #fff; 
 }
 
 h1 {
-    font-size: 4em; /* Adjust the font size as needed */
+    font-size: 4em; 
 }
 
 .subheading {
-    font-size: 1.5em; /* Adjust the font size as needed */
-}
+    font-size: 1.5em; 
+}}
