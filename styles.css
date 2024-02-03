@@ -30,7 +30,7 @@ h1 {
     font-size: 2em; /* Adjust the font size as needed */
 }
 
-.button{
+.getPromptBtn{
     background-color: #4FA5E4;
     border: none;
     color: #fff;
@@ -43,8 +43,12 @@ h1 {
     /* Need background-image to do arrow thing on the figma file*/
 }
 
-.button:hover{
+.getPromptBtn:hover{
     background-color: #121212;
     color: #4FA5E4;
     border: 2px solid #4FA5E4;
+}
+
+#promptDisplay {
+    margin-top: 16px;
 }

@@ -1,20 +1,27 @@
-
-document.getElementById("getPromptBtn").addEventListener("click", async () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const getPromptBtn = document.querySelector(".getPromptBtn");
     const promptDisplay = document.getElementById("promptDisplay");
 
-    try {
-        
-        const response = await fetch("prompts.json");
-        const data = await response.json(); // Parse the JSON data
-        const promptsArray = data.prompts; // Extract the array of prompts from the JSON data
+    getPromptBtn.addEventListener("click", async () => {
+        console.log("Button clicked");
 
-        const randomIndex = Math.floor(Math.random() * promptsArray.length); // Generate a random index
-        const randomPrompt = promptsArray[randomIndex]; // Select a random prompt from the array
+        try {
+            const response = await fetch("prompts.json");
+            const data = await response.json();
+            const promptsArray = data.interviewQuestions;
 
-        // Update the UI with the randomly selected prompt
-        promptDisplay.innerText = randomPrompt;
-    } catch (error) {
-        console.error("Error fetching prompts:", error);
-        promptDisplay.innerText = "Error fetching prompts.";
-    }
+            if (promptsArray && promptsArray.length > 0) {
+                const randomIndex = Math.floor(Math.random() * promptsArray.length);
+                const randomPrompt = promptsArray[randomIndex];
+
+                // Update the UI with the randomly selected prompt
+                promptDisplay.innerText = randomPrompt;
+            } else {
+                promptDisplay.innerText = "No prompts available.";
+            }
+        } catch (error) {
+            console.error("Error fetching or parsing prompts:", error);
+            promptDisplay.innerText = "Error fetching or parsing prompts.";
+        }
+    });
 });
