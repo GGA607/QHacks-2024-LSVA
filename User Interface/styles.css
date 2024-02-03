@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #121212; /* Black background */
+    background: linear-gradient(to right,#242424, #5959ab, #242424);
 }
 
 .container {
@@ -39,8 +39,7 @@ h1 {
     border-radius: 8px;
     font-size: 2em;
     transition-duration: 0.5s;
-
-    /* Need background-image to do arrow thing on the figma file*/
+    
 }
 
 .getPromptBtn:hover{
