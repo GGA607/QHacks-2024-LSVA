@@ -53,3 +53,30 @@ h1 {
     margin-top: 16px;
     font-size: 2em;
 }
+
+.tabs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 16px;
+}
+
+.tab {
+    background-color: #4FA5E4;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #121212;
+    color: #4FA5E4;
+    border: 2px solid #4FA5E4;
+}
+
+.content {
+    margin-top: 16px;
+}
