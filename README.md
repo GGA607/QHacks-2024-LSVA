@@ -2,7 +2,7 @@
 
 ## Description
 
-QInterviews is a web application designed to enhance users's quick thinking, communication, and interview skills.
+QInterviews is a web application designed to enhance users's quick thinking, communication, and interview skills through practice interview questions and AI-generated feedback.
 
 ## Usage
 
