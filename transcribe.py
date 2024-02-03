@@ -6,20 +6,33 @@ TODO: This file is meant to interpret user speech and render it back to the cons
 Authors: Alec Glasford, Logan Jarvis, Shravan Agnihotri, Vedansh Bhatt
 Last Modified: 2024/02/02
 """
-import speech_recognition as sr 
-import pyttsx3
+import pyaudio, wave
 
-r = sr.Recognizer() # initializes the recognizer
+CHUNK = 1024
+FORMAT = pyaudio.paInt16
+CHANNELS = 1
+RATE = 44100
 
-def UserSpeech(command):
-    # intialize the engine
-    engine = pyttsx3.init()
-    engine.say(command)
-    engine.runAndWait()
+p = pyaudio.PyAudio()
+stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True, frames_per_buffer = CHUNK)
+
+print("start recording...")
+
+frames = []
+seconds = 10
+for i in range(0, int(RATE / CHUNK * seconds)):
+    data = stream.read(CHUNK)
+    frames.append(data)
     
-with sr.Microphone as source2:
-    print("Calibrating... silence please")
-    r.adjust_for_ambient_noise(source2, duration = 2)
-    print("Calibrated, feel free to speak :)")
-    
-UserSpeech("Greetings, Earthlings!")
+print("recording has stopped.")
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+
+wf = wave.open("output.wav", "wb")
+wf.setnchannels(CHANNELS)
+wf.setsampwidth(p.get_sample_size(FORMAT))
+wf.setframerate(RATE)
+wf.writeframes(b''.join(frames))
+wf.close()
