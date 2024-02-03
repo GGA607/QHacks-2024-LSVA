@@ -1,10 +1,10 @@
-#QInterviews
+# QInterviews
 
-##Description
+## Description
 
 QInterviews is a web application designed to enhance users's quick thinking, communication, and interview skills with practice interview questions and AI-generated feedback.
 
-##Usage
+## Usage
 
 1. Visit the webpage, QInterviews.ai, and click generate questions to generate practice questions.
 2. After a question is generated, a 1-minute timer is started to answer the question through the computer's microphone. Users can stop the recording at any time by hitting the stop recording button.
