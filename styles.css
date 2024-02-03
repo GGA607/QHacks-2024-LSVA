@@ -32,7 +32,7 @@ h1 {
 
 .button{
     background-color: #4FA5E4;
-    border: none;
+    border: 2px solid #121212;
     color: #fff;
     margin: 32px;
     padding: 1vh 3vw;
