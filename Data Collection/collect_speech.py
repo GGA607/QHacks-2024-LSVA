@@ -19,7 +19,7 @@ stream = p.open(format = FORMAT, channels = CHANNELS, rate = RATE, input = True,
 print("start recording...")
 
 frames = []
-seconds = 30
+seconds = 10
 for i in range(0, int(RATE / CHUNK * seconds)):
     data = stream.read(CHUNK)
     frames.append(data)
