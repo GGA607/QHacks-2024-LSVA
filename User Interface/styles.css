@@ -35,7 +35,7 @@ h1 {
     border: 2px solid #121212;
     color: #fff;
     margin: 32px;
-    padding: 1vh 3vw;
+    padding: 2vh 3vw;
     border-radius: 8px;
     font-size: 2em;
     transition-duration: 0.5s;
@@ -62,8 +62,8 @@ h1 {
 }
 
 .tab {
-    background-color: #4FA5E4;
-    border: none;
+    background-color: #25445B;
+    border: 2px solid #121212;
     color: #fff;
     padding: 8px 16px;
     margin-right: 8px;
@@ -71,10 +71,15 @@ h1 {
     cursor: pointer;
 }
 
+.tab a{
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
 .tab:hover {
     background-color: #121212;
-    color: #4FA5E4;
-    border: 2px solid #4FA5E4;
+    color: #25445B;
+    border: 2px solid #25445B;
 }
 
 .content {
