@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,400&display=swap');
+
+*{
+    color: #fff;
+    font-family: Noto Sans;
+    margin: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -5,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000; /* Black background */
+    background-color: #121212; /* Black background */
 }
 
 .container {
@@ -14,9 +22,33 @@ body {
 }
 
 h1 {
-    font-size: 4em; /* Adjust the font size as needed */
+    font-size: 6em; /* Adjust the font size as needed */
+    font-weight: 900;
 }
 
 .subheading {
-    font-size: 1.5em; /* Adjust the font size as needed */
+    font-size: 2em; /* Adjust the font size as needed */
+}
+
+.getPromptBtn{
+    background-color: #4FA5E4;
+    border: 2px solid #121212;
+    color: #fff;
+    margin: 32px;
+    padding: 1vh 3vw;
+    border-radius: 8px;
+    font-size: 2em;
+    transition-duration: 0.5s;
+
+    /* Need background-image to do arrow thing on the figma file*/
+}
+
+.getPromptBtn:hover{
+    background-color: #121212;
+    color: #4FA5E4;
+    border: 2px solid #4FA5E4;
+}
+
+#promptDisplay {
+    margin-top: 16px;
 }

@@ -1,15 +1,28 @@
-[
-
-    {
-        "question" : "Describe a time in which you displayed leadership."
-    },
-
-    {
-        "question" : "What are your greatest strengths?"
-    },
-
-    {
-        "question" : "What do you bring to the table others do not?"
-    }
-
-]
+{   
+    "interviewQuestions": [
+      "Can you tell me a little bit about yourself?",
+      "What motivated you to apply for this position?",
+      "How do your skills and experiences align with the requirements of this role?",
+      "Describe a challenging situation at work and how you handled it.",
+      "What are your greatest strengths and weaknesses?",
+      "How do you handle stress and pressure?",
+      "Can you provide an example of a successful project you've worked on?",
+      "How do you stay updated on industry trends and advancements?",
+      "Describe a situation where you had to work in a team to accomplish a goal.",
+      "Where do you see yourself in five years?",
+      "How do you prioritize and manage your time effectively?",
+      "Tell me about a time when you had to overcome a significant obstacle.",
+      "What do you enjoy most about your current/previous job?",
+      "How do you adapt to change and new technologies?",
+      "What skills or experiences make you a strong fit for this position?",
+      "Describe a situation where you had to deal with a difficult coworker or client.",
+      "How do you handle constructive criticism?",
+      "What are your favorite tools or technologies to use in your work?",
+      "How do you approach learning and mastering new skills?",
+      "Discuss a situation where you had to meet tight deadlines.",
+      "How do you ensure attention to detail in your work?",
+      "Tell me about a time when you demonstrated leadership qualities.",
+      "What do you know about our company, and why do you want to work here?"
+    ]
+  }
+  
