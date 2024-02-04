@@ -39,7 +39,6 @@ h1 {
     border-radius: 8px;
     font-size: 2em;
     transition-duration: 0.5s;
-    
 }
 
 .getPromptBtn:hover{
@@ -50,6 +49,26 @@ h1 {
 
 #promptDisplay {
     margin-top: 16px;
+    font-size: 2em;
+}
+
+#recordButton button{
+    background-color: #dc3535;
+    border: 2px solid #121212;
+    color: #fff;
+    margin: 32px 8px;
+    padding: 2vh 3vw;
+    border-radius: 8px;
+    font-size: 2em;
+}
+
+#stopRecordButton button{
+    background-color: #dc3535;
+    border: 2px solid #121212;
+    color: #fff;
+    margin: 32px 8px;
+    padding: 2vh 3vw;
+    border-radius: 8px;
     font-size: 2em;
 }
 
