@@ -2,6 +2,7 @@
 QHacks 2024 Project
 
 TODO: This file is meant to collect user speech and store it in a wav file.
+This is not needed
 
 Authors: Alec Glasford, Logan Jarvis, Shravan Agnihotri, Vedansh Bhatt
 Last Modified: 2024/02/02
