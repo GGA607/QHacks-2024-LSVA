@@ -15,35 +15,30 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-#initializaing our dataframe
-df = pd.read_csv("dummy_data.csv")
 
 #creating our functions to manage our data
 
 def data_preperation(text):
-    #tokenizing the text
-    tokens = word_tokenize(text.lower)
-    
-    #removing stop words with nltk's built in model
-    filtered_tokens = [token for token in tokens if token not in stopwords.words('english')]
+    # Tokenizing the text
+    tokens = word_tokenize(text.lower())
 
-    #lemmatize the tokens. this reduces words into their base form and allow for a more simple understanding
+    # Removing stop words with nltk's built-in model
+    stop_words = set(stopwords.words('english'))
+    filtered_tokens = [token for token in tokens if token not in stop_words]
+
+    # Lemmatize the tokens to reduce words to their base form
     lemmatizer = WordNetLemmatizer()
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
 
-    #rejoins the tokens back into a string
+    # Rejoin the tokens back into a string
     processed_text = ' '.join(lemmatized_tokens)
 
     return processed_text
 
-# adding "reviewText" by calling the data_preperation method to clean the data of stopping words, then lemmatizing them
-df['reviewText'] = df['reviewText'].apply(data_preperation)
-
-# initialize NLTK sentiment analyzer
-analyzer = SentimentIntensityAnalyzer()
-
 # create get_sentiment function
 def get_sentiment(text):
+    # initialize NLTK sentiment analyzer
+    analyzer = SentimentIntensityAnalyzer()
 
     #  rating the overall text
     ratings = analyzer.polarity_scores(text)
@@ -51,13 +46,5 @@ def get_sentiment(text):
 
     return sentiment
 
-
-# adding "sentiment" by calling the get_sentiment method to evaluate the polarity of the text
-df['sentiment'] = df['replyText'].apply(get_sentiment)
-
 def get_analysis(text):
-    
-    # adding "reviewText" by calling the data_preperation method to clean the data of stopping words, then lemmatizing them
-    df['replyText'] = df['replyText'].apply(data_preperation)
-    # adding "sentiment" by calling the get_sentiment method to evaluate the polarity of the text
-    df['sentiment'] = df['replyText'].apply(get_sentiment)
+    return get_sentiment(data_preperation(text))

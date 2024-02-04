@@ -12,5 +12,9 @@ def t_scribe(audio_file):
     # transcribing the users data into a string.
     user_data = r.recognize_google(audio)
     
+    # uploading the users input to a text file
+    with open("user_input.txt", "w") as f:
+        f.write(user_data)
+
     return user_data
     
