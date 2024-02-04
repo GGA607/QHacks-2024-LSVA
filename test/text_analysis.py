@@ -7,7 +7,6 @@ Authors: Alec Glasford, Logan Jarvis, Shravan Agnihotri, Vedansh Bhatt
 Last Modified: 2024/02/03
 """
 #importing our librarys
-import pandas as pd
 import nltk
 #importing specfic functions from out librarys
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -40,11 +39,15 @@ def get_sentiment(text):
     # initialize NLTK sentiment analyzer
     analyzer = SentimentIntensityAnalyzer()
 
-    #  rating the overall text
-    ratings = analyzer.polarity_scores(text)
-    sentiment = 1 if ratings['pos'] > 0 else 0
+    # get the compound score
+    compound_score = analyzer.polarity_scores(text)['compound']
+    print(text)
+    # 1 for positive sentiment if the compound score is greater than or equal to 0
 
-    return sentiment
+    return compound_score
 
 def get_analysis(text):
     return get_sentiment(data_preperation(text))
+
+if __name__ == "__main__":
+    print(get_analysis("I am a cat who loves killing little children"))
