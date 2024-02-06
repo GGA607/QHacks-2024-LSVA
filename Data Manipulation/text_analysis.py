@@ -41,7 +41,7 @@ def get_sentiment(text):
 
     # get the compound score
     compound_score = analyzer.polarity_scores(text)['compound']
-    print(text)
+    print(text + "- score on a scale from [-1, 1] for positivity.")
     # 1 for positive sentiment if the compound score is greater than or equal to 0
 
     return compound_score
@@ -50,4 +50,5 @@ def get_analysis(text):
     return get_sentiment(data_preperation(text))
 
 if __name__ == "__main__":
-    print(get_analysis("I am a cat who loves killing little children"))
+    print("I love QHacks 2024!")
+    print(get_analysis("I love QHacks 2024!"))
